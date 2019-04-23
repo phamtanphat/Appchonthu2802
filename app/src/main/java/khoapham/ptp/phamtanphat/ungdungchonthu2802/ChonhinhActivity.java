@@ -10,6 +10,9 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.Toast;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 public class ChonhinhActivity extends AppCompatActivity {
 
     TableLayout tableLayout;
@@ -21,6 +24,7 @@ public class ChonhinhActivity extends AppCompatActivity {
         tableLayout = findViewById(R.id.tableLayout);
 
         final String[] mang = getResources().getStringArray(R.array.Arraythucung);
+        Collections.shuffle(Arrays.asList(mang));
         int dong = 6;
         int cot = 3;
 

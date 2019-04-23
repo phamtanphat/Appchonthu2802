@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode == Request_Code && resultCode == RESULT_OK && data != null){
 //            int idhinh = (int) data.getExtras().get("idhinh"); lay du lieu dang bundle
             int idhinh = data.getIntExtra("idhinh",-1);
-            Log.d("BBB" , idhinh + "");
+//            Log.d("BBB" , idhinh + "");
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
