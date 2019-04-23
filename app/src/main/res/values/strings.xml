@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Ungdungchonthu2802</string>
     <array name="Arraythucung">
-        <item>bo</item>
+
         <item>bocanhcung</item>
         <item>bongua</item>
         <item>cachep</item>
