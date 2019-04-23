@@ -39,6 +39,8 @@ public class ChonhinhActivity extends AppCompatActivity {
                     imageView.setImageResource(android.R.color.transparent);
                 }else{
                     final int idhinh = getResources().getIdentifier(mang[index - 1],"drawable",getPackageName());
+                    TableRow.LayoutParams layoutParams = new TableRow.LayoutParams(300 , 300);
+                    imageView.setLayoutParams(layoutParams);
                     imageView.setImageResource(idhinh);
                     imageView.setOnClickListener(new View.OnClickListener() {
                         @Override
