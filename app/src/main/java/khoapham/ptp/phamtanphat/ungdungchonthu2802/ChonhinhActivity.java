@@ -12,11 +12,13 @@ import android.widget.Toast;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Observer;
 
 public class ChonhinhActivity extends AppCompatActivity {
 
     TableLayout tableLayout;
     int index = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +55,6 @@ public class ChonhinhActivity extends AppCompatActivity {
             }
             tableLayout.addView(tableRow);
         }
-
     }
+
 }
