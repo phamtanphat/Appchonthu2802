@@ -1,6 +1,7 @@
 package khoapham.ptp.phamtanphat.ungdungchonthu2802;
 
 import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView imgHinhGoc,imgHinhChon;
     int hinhgoc = 0;
-
+    int Request_Code = 123;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +35,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,ChonhinhActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent , Request_Code);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(requestCode == Request_Code && resultCode == RESULT_OK && data != null){
+//            int idhinh = (int) data.getExtras().get("idhinh"); lay du lieu dang bundle
+            int idhinh = data.getIntExtra("idhinh",-1);
+            Log.d("BBB" , idhinh + "");
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }
